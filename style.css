@@ -1,34 +1,50 @@
-body {
-	background: #333;
-	color: #F6F6F6;
-	margin: 0;
-	font-family: sans-serif;
+body { margin: 0; font-family: sans-serif; }
+
+/* header */
+header {
+	background: #161616;
+	color: #fff;
+	font-family: monospace; font-size: 2em;
+	height: 300px; padding: 10px 10vw 10px 10vw;
+	display: flex; align-items:flex-end;
 }
-.sitenews {
-	background: #3D3D3D;
-	border-radius: 5px;
-	padding: 5px;
-	width: 90%;
-	margin: 5px auto 0 auto;
+header h1 { padding: 0; margin: 0 0 20px 0; font-size: 1.5em !important; }
+.linkbox { margin-left: auto; }
+.linkbox ul { list-style-type: none; text-align: right; }
+.linkbox li { padding-top: 10px; }
+.linkbox ul li a { color: #fff !important; font-size: 1em; }
+.linkbox ul li p { color: #888; margin: 0; font-size: 0.75em; }
+
+/* content */
+.content { padding: 10px 10vw 10px 10vw; }
+.content a { color: #000 !important; }
+.project-grid {
+	padding: 5px 10px 5px 5px; margin: 10px;
+	display: grid; grid-gap: 5px 5px; grid-template-columns: 50% 50%;
+	background: #161616;
 }
-.logo, .links {
-	width: 50%;
-	position: absolute;
-	bottom: 0;
-	padding: 10px;
+.project { background: #242424; color: #fff; padding: 10px; }
+.project a { color: #fff !important; }
+.project h3 { margin-top: 0; }
+#socials { display: flex; text-align: right; }
+#socials .text { margin-left: auto; }
+/* footer */
+footer {
+	background: #121212; color: #eee;
+	height: 100px; padding: 10px 10vw 10px 10vw;
+	display: flex; align-items: center;
 }
-h1 { font-size: 3em; }
-.links { font-size: 1.9em; right: 0; text-align: right; }
-a {
-	color: #f6f6f6 !important;
-	text-decoration: none;
-	margin: 0 0 10px 0;
-	border-bottom: solid 3px #222;
+footer a { color: #ddd !important; }
+
+/* responsive layout */
+@media only screen and (max-width: 600px) {
+	header { align-items: center; justify-content: center; height: 250px; }
+	.linkbox { display:none; }
 }
-a:hover { border-bottom-color: #2D2D2D; color: #F2F2F2; }
-.links h2 { font-size: 0.5em; }
-#content h2 { font-size: 1.3em; }
-h2 { text-transform: uppercase; }
-h1, h2 { margin: 6px 0 0 0; }
-.back { width: 80px !important; min-height: 30px; margin-left: 4px; padding: 4px 16px 4px 16px; background: #3D3D3D; }
-#content { padding: 5px 2vw 5px 2vw; }
+@media only screen and (max-width: 400px) {
+	.project-grid { display: block; padding: 5px; text-align: center; }
+	#socials { display: block; text-align: center; }
+	#socials ul    { margin: 0; padding: 0; }
+	#socials img   { display: none; }
+	#socials .text { margin-left: 0; }
+}
