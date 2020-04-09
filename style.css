@@ -1,14 +1,14 @@
 body { margin: 0; font-family: sans-serif; }
 
 /* header */
-header {
+#header {
 	background: #161616;
 	color: #fff;
 	font-family: monospace; font-size: 2em;
 	height: 300px; padding: 10px 10vw 10px 10vw;
 	display: flex; align-items:flex-end;
 }
-header h1 { padding: 0; margin: 0 0 20px 0; font-size: 1.5em !important; }
+#header h1 { padding: 0; margin: 0 0 20px 0; font-size: 1.5em !important; }
 .linkbox { margin-left: auto; }
 .linkbox ul { list-style-type: none; text-align: right; }
 .linkbox li { padding-top: 10px; }
@@ -29,16 +29,16 @@ header h1 { padding: 0; margin: 0 0 20px 0; font-size: 1.5em !important; }
 #socials { display: flex; text-align: right; }
 #socials .text { margin-left: auto; }
 /* footer */
-footer {
+#footer {
 	background: #121212; color: #eee;
 	height: 100px; padding: 10px 10vw 10px 10vw;
 	display: flex; align-items: center;
 }
-footer a { color: #ddd !important; }
+#footer a { color: #ddd !important; }
 
 /* responsive layout */
 @media only screen and (max-width: 600px) {
-	header { align-items: center; justify-content: center; height: 250px; }
+	#header { align-items: center; justify-content: center; height: 250px; }
 	.linkbox { display:none; }
 }
 @media only screen and (max-width: 400px) {
