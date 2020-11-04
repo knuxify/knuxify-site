@@ -30,7 +30,9 @@ body {
 	float: right;
 }
 
-.info-pane h1 { padding: 10px; align-self: flex-end; font-family: 'Roboto Mono', 'Source Code Pro', monospace; letter-spacing: 0.75em; margin: 0; }
+.info-pane h1, .logo-body { padding: 10px; align-self: flex-end; font-family: 'Roboto Mono', 'Source Code Pro', monospace; letter-spacing: 0.75em; margin: 0; }
+
+.logo-body { line-height: 1.2em; }
 
 .content {
 	height: 350px;
@@ -57,10 +59,17 @@ a i {
 	margin-right: 5px;
 }
 
+.logo-body { display: none; }
+
 @media only screen and (max-width:500px) {
 	body { display: block; margin: 58px 10px 10px 10px; }
 	.card { width: 100%; }
-	.info-pane { left: 0; background-color: #111; flex-direction: column; display: flex; float: none; position: fixed; top: 0; height: 48px; width: 100%; margin: 0; padding: 0; }
+	.card, .content { max-height: initial; height: auto; }
+	.info-pane { left: 0; background-color: #111; flex-direction: column; display: flex; float: none; position: fixed; top: 0; height: 48px; width: 100%; margin: 0; padding: 0; height: auto; }
 	.info-pane ul { display: flex; }
-	.info-pane h1 { padding: 2px; align-self: flex-end; font-size: 10px; }
+	.info-pane li { padding-bottom: 2px; }
+	.info-pane li a { display: inline-block; text-align: center; }
+	.info-pane h1 { display: none }
+	.ignore-mobile { display: none; }
+	.logo-body { display: block; }
 }
